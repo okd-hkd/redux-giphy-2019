@@ -1,10 +1,11 @@
-const initialState = [];
+const initialState = "FInd Your GIfs";
 
 const imageUrls = (state = initialState, action) => {
   switch (action.type) {
-    // action.payload に data が乗ってくる
+    case "START_REQUEST":
+      return "Wait...";
     case "RECEIVE_DATA":
-      return action.payload;
+      return initialState;
 
     default:
       return state;
